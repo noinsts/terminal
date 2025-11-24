@@ -157,6 +157,10 @@ void Editor::handleChar(int c)
 void Editor::saveContent() const
 {
     std::ofstream file("output.txt");
+    if (!file.is_open())
+    {
+        return;
+    }
     for (auto& line : lines)
     {
         file << line << std::endl;
