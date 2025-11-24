@@ -55,10 +55,7 @@ void Editor::drawStatusBar() const
         cursorY + 1, cursorX + 1, lines.size()
     );
 
-    for (size_t i = getcurx(stdscr); i < width; ++i)
-    {
-        addch(' ');
-    }
+    hline(' ', width - getcurx(stdscr));
 
     attroff(A_REVERSE);
 }
