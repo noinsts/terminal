@@ -4,6 +4,7 @@ project(KiloR)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(KiloR
+        src/Editor.cpp
         src/main.cpp)
 
 find_package(Curses REQUIRED)
